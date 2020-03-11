@@ -5,9 +5,6 @@
     <title>Дизайн-студия «Нёрдс»</title>
   </head>
   <body>
-    <input class="visually-hidden" type="radio" id="slider-toggle-1" name="toggle" checked>
-    <input class="visually-hidden" type="radio" id="slider-toggle-2" name="toggle">
-    <input class="visually-hidden" type="radio" id="slider-toggle-3" name="toggle">
     <div class="grey-wrapper">
       <header class="site-header container">
         <nav class="site-navigation">
@@ -31,6 +28,9 @@
         <section class="slider container">
           <h2 class="visually-hidden">Слайдер с информацией о компании</h2>
           <div class="slider-controls">
+            <input class="visually-hidden" type="radio" id="slider-toggle-1" name="toggle" checked>
+            <input class="visually-hidden" type="radio" id="slider-toggle-2" name="toggle">
+            <input class="visually-hidden" type="radio" id="slider-toggle-3" name="toggle">
             <label for="slider-toggle-1">Первый</label>
             <label for="slider-toggle-2">Второй</label>
             <label for="slider-toggle-3">Третий</label>
@@ -79,19 +79,16 @@
           <li class="services-item">
             <h3 class="services-item-title">Веб-сайты</h3>
             <p class="services-item-description">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            <img src="img/services-item-1.jpg" width="300" height="146" alt="Разработка веб-сайтов">
             <a class="button services-button" href="#">Заказать</a>
           </li>
           <li class="services-item">
             <h3 class="services-item-title">Приложения</h3>
             <p class="services-item-description">Покорите топ-10 приложений в AppStore и Google Play</p>
-            <img src="img/services-item-2.jpg" width="300" height="146" alt="Разработка приложений">
             <a class="button services-button" href="#">Заказать</a>
           </li>
           <li class="services-item">
             <h3 class="services-item-title">Презентации</h3>
             <p class="services-item-description">Вы даже не подозреваете, насколько вы изумительны!</p>
-            <img src="img/services-item-3.jpg" width="300" height="146" alt="Разработка презентаций">
             <a class="button services-button" href="#">Заказать</a>
           </li>
         </ul>
@@ -100,8 +97,8 @@
       <section class="features container">
         <h2 class="visually-hidden">Преимущества компании</h2>
         <div class="features-description">
-          <p class="features-promo"><span>Мы — маленькая, но гордая дизайн-студия из Краснодара.</span>
-            Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p> 
+          <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p> 
           <p class="features-title">Выполняем заказы на разработку:</p>
             <ul class="features-list">
               <li class="features-list-item">Веб-сайтов любой сложности</li>
@@ -129,26 +126,25 @@
 
       <section class="partners container">
         <h2 class="visually-hidden">Партнёры компании</h2>
-        <!-- Временные инлайновые стили прозрачности - потом перенести в css -->
         <ul class="partners-list">
           <li>
             <a class="partners-item" href="https://htmlacademy.ru/intensive/htmlcss">
-              <img src="img/htmlacdemy-logo.png" width="199" height="68" style="opacity: 0.2;" alt="Логотип HTML Academy">
+              <img src="img/htmlacdemy-logo.png" width="199" height="68" alt="Логотип HTML Academy">
             </a>
           </li>
           <li>
             <a class="partners-item" href="#">
-              <img src="img/borodinski-logo.png" width="209" height="90" style="opacity: 0.2;" alt="Логотип Барбершопа Бородинский">
+              <img src="img/borodinski-logo.png" width="209" height="90" alt="Логотип Барбершопа Бородинский">
             </a>
           </li>
           <li>
             <a class="partners-item" href="#">
-              <img src="img/pink-logo.png" width="185" height="52" style="opacity: 0.2;" alt="Логотип Pink">
+              <img src="img/pink-logo.png" width="185" height="52" alt="Логотип Pink">
             </a>
           </li>
           <li>
             <a class="partners-item" href="#">
-              <img src="img/mishka-logo.png" width="173" height="84" style="opacity: 0.2;" alt="Логотип Mishka">
+              <img src="img/mishka-logo.png" width="173" height="84" alt="Логотип Mishka">
             </a>
           </li>
         </ul>
@@ -160,9 +156,9 @@
         <div class="contacts-information">
           <h3 class="contacts-information-title">NЁRDS DESIGN STUDIO</h3>
           <p class="contacts-information-adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            <span>тел. +7 (812) 275-75-75</span>
+            <span>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></span>
           </p>
-          <button class="button feedback-button" type="button">Напишите нам</button>
+          <a class="button feedback-button" href="writeus.html">Напишите нам</a>
         </div>
       </section>
 
@@ -174,9 +170,10 @@
         <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
         <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
       </ul>
-      <p class="footer-message"><span>Давайте дружить, это выгодно!</span>
-        Скидка 10% для друзей из социальных сетей.
-      </p>
+      <div class="footer-message">
+        <p>Давайте дружить, это выгодно!</p>
+        <span>Скидка 10% для друзей из социальных сетей.</span>
+      </div>
     </footer>
 
     <section class="modal-feedback">
