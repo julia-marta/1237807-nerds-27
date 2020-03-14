@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>Дизайн-студия «Нёрдс»</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="grey-wrapper">
       <header class="site-header container">
         <nav class="site-navigation">
-          <a class="site-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»"></a>
+          <a class="site-logo site-logo-link" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии «Нёрдс»"></a>
           <ul class="site-menu">
               <li><a class="site-menu-item" href="#">Студия</a></li>
               <li><a class="site-menu-item" href="#">Клиенты</a></li>
@@ -32,7 +35,7 @@
         <section class="filter">
           <h2 class="visually-hidden">Фильтр</h2>
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="filter-item">
+            <fieldset class="filter-item filter-item-price">
               <legend>Стоимость:</legend>
               <div class="filter-price">
                 <div class="filter-range-controls">
@@ -43,12 +46,12 @@
                   <div class="filter-range-toggle filter-range-toggle-max"></div>
                 </div>
                 <div class="filter-price-controls">
-                  <label class="filter-price-min">от <input name="min-price" type="number" value="0"></label>
-                  <label class="filter-price-max">до <input name="max-price" type="number" value="15000"></label>
+                  <label>от <input name="min-price" type="number" value="0"></label>
+                  <label>до <input name="max-price" type="number" value="15000"></label>
                 </div>
               </div>
             </fieldset>
-            <fieldset class="filter-item">
+            <fieldset class="filter-item filter-item-grid">
               <legend>Сетка:</legend>
               <ul class="filter-grid">
                 <li class="filter-grid-item">
@@ -60,12 +63,12 @@
                   <label for="grid-fixed">Фиксированная</label>
                 </li>
                 <li class="filter-grid-item">
-                  <input class="visually-hidden filter-grid-radio" type="radio" name="grid" value="flexible" id="grid-flexible">
+                  <input class="visually-hidden filter-grid-radio" type="radio" name="grid" value="flexible" id="grid-flexible" disabled>
                   <label for="grid-flexible">Резиновая</label>
                 </li>
               </ul>
             </fieldset> 
-            <fieldset class="filter-item">
+            <fieldset class="filter-item filter-item-specials">
               <legend>Особенности:</legend>
               <ul class="filter-specials">
                 <li class="filter-specials-item">
@@ -73,7 +76,7 @@
                   <label for="specials-slider">Слайдер</label>
                 </li>
                 <li class="filter-specials-item">
-                  <input class="visually-hidden filter-specials-features" type="checkbox" name="features" id="specials-features">
+                  <input class="visually-hidden filter-specials-checkbox" type="checkbox" name="features" id="specials-features">
                   <label for="specials-features">Блок преимуществ</label>
                 </li>
                 <li class="filter-specials-item">
@@ -81,11 +84,11 @@
                   <label for="specials-news">Новости</label>
                 </li>
                 <li class="filter-specials-item">
-                  <input class="visually-hidden filter-specials-features" type="checkbox" name="gallery" id="specials-gallery">
+                  <input class="visually-hidden filter-specials-checkbox" type="checkbox" name="gallery" id="specials-gallery">
                   <label for="specials-gallery">Галерея</label>
                 </li>
                 <li class="filter-specials-item">
-                  <input class="visually-hidden filter-specials-features" type="checkbox" name="basket" id="specials-basket">
+                  <input class="visually-hidden filter-specials-checkbox" type="checkbox" name="basket" id="specials-basket" disabled>
                   <label for="specials-basket">Корзина</label>
                 </li>
               </ul>
@@ -97,16 +100,24 @@
         <section class="catalog">
           <h2 class="visually-hidden">Каталог готовых шаблонов</h2>
           <form class="filter-sorting" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="filter-item sorting">
-              <legend>Стоимость:</legend>
-              <ul class="sorting-list">
-                <li>По цене</li>
-                <li>По типу</li>
-                <li>По названию</li>
+            <fieldset class="filter-item filter-item-sorting">
+              <legend class="filter-sorting-title">Сортировать:</legend>
+              <ul class="filter-sorting-list">
+                <li class="filter-sorting-item filter-sorting-item-active">По цене</li>
+                <li class="filter-sorting-item">По типу</li>
+                <li class="filter-sorting-item">По названию</li>
               </ul>
-              <div class="sorting-toggles">
-                <div class="sorting-toggle-down"></div>
-                <div class="sorting-toggle-up"></div>
+              <div class="filter-sorting-toggles">
+                <div class="filter-sorting-toggle filter-sorting-toggle-active">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#a6a6a6" d="M5.5 10L0 0h11"/>
+                  </svg>
+                </div>
+                <div class="filter-sorting-toggle">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#a6a6a6" d="M5.5 0L0 10h11z"/>
+                  </svg>
+              </div>
               </div>
             </fieldset>
           </form>
@@ -115,7 +126,7 @@
               <img src="img/img-sedona.jpg" width="360" height="576" alt="Шаблон информационного сайта для туристов Sedona">
               <div class="catalog-item-description">
                 <h3 class="catalog-item-title"><a href="#">Sedona</a></h3>
-                <p>Информационный сайт для туристов</p>
+                <p>Информационный сайт<br>для туристов</p>
                 <a class="button catalog-button" href="#">9 900 руб.</a>
               </div>
             </li>
@@ -131,7 +142,7 @@
               <img src="img/img-barbershop.jpg" width="360" height="576" alt="Шаблон сайта салона красоты Barbershop">
               <div class="catalog-item-description">
                 <h3 class="catalog-item-title"><a href="#">Barbershop</a></h3>
-                <p>Сайт салона красоты. Для мужчин, да.</p>
+                <p>Сайт салона красоты.<br>Для мужчин, да.</p>
                 <a class="button catalog-button" href="#">9 900 руб.</a>
               </div>
             </li>
@@ -139,7 +150,7 @@
               <img src="img/img-mishka.jpg" width="360" height="576" alt="Шаблон интернет-магазина вязаных игрушек Mishka">
               <div class="catalog-item-description">
                 <h3 class="catalog-item-title"><a href="#">Mishka</a></h3>
-                <p>Интернет-магазин вязаных игрушек</p>
+                <p>Интернет-магазин<br>вязаных игрушек</p>
                 <a class="button catalog-button" href="#">9 900 руб.</a>
               </div>
             </li>
@@ -164,7 +175,7 @@
             <li class="pagination-item pagination-current"><a>1</a></li>
             <li class="pagination-item"><a href="#">2</a></li>
             <li class="pagination-item"><a href="#">3</a></li>
-            <li class="pagination-next"><a href="#">Следующая</a></li>
+            <li class="pagination-item pagination-next"><a href="#">Следующая</a></li>
           </ul>
         </section>
 
@@ -174,10 +185,9 @@
         <h2 class="visually-hidden">Карта проезда и контактная информация</h2>
         <img class="contacts-map" src="img/map.jpg" width="1440" height="416" alt="Офис по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <div class="contacts-information">
-          <h3 class="contacts-information-title">NЁRDS DESIGN STUDIO</h3>
-          <p class="contacts-information-adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-            <span>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></span>
-          </p>
+          <h3 class="contacts-information-title">Nёrds Design Studio</h3>
+          <p class="contacts-information-adress">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <p class="contacts-information-phone">тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
           <a class="button feedback-button" href="writeus.html">Напишите нам</a>
         </div>
       </section>
@@ -186,20 +196,20 @@
 
     <footer class="site-footer container">
       <ul class="footer-social">
-        <li><a class="social-button" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
-        <li><a class="social-button" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-        <li><a class="social-button" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+        <li><a class="social-button social-vkontakte" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+        <li><a class="social-button social-facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+        <li><a class="social-button social-instagram" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
       </ul>
       <div class="footer-message">
-        <p>Давайте дружить, это выгодно!</p>
-        <span>Скидка 10% для друзей из социальных сетей.</span>
+        <p class="footer-message-title">Давайте дружить, это выгодно!</p>
+        <span class="footer-message-text">Скидка 10% для друзей из социальных сетей.</span>
       </div>
     </footer>
 
     <section class="modal-feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
       <p class="modal-feedback-message">Напишите нам</p>
-      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label for="user-name">Ваше имя:</label>
             <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
