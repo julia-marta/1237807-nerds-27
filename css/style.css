@@ -1060,23 +1060,34 @@ a {
 
 .contacts-map {
   display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
   width: 1440px;
-  height: 416px;
+  z-index: 1;
+  margin: 0;
+  margin-left: -720px;
+}
+
+.contacts iframe {
+  display: block;
+  position: relative;
+  z-index: 2;
   margin: 0 auto;
+  border: none;
 }
 
 .contacts-information {
   position: absolute;
   top: 54px;
   left: 50%;
-  z-index: 2;
+  z-index: 3;
   width: 224px;
   min-height: 259px;
   margin-left: -580px;
   padding-top: 49px;
   padding-left: 50px;
   padding-right: 45px;
-  
   background-color: #ffffff;
 }
 
@@ -1088,7 +1099,6 @@ a {
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
-
   color: #000000;
 }
 
@@ -1214,15 +1224,87 @@ a {
   color: #444444;
 }
 
+/* Анимации модального окна */
+
+@keyframes open {
+  0% {
+    transform: translateY(-100%) translateX(-50%);
+  }
+
+  60% {
+    transform: translateY(-40%) translateX(-50%);
+  }
+
+  70% {
+    transform: translateY(-45%) translateX(-50%);
+  }
+
+  100% {
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(-60%) translateX(-50%);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateY(-55%) translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(100%) translateX(-50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(-50%);
+  }
+  5%,
+  15%,
+  25%,
+  35%,
+  45%,
+  55%,
+  65%,
+  75%,
+  85%,
+  95% {
+    transform: translateY(-50%) translateX(-51%);
+  }
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90% {
+    transform: translateY(-50%) translateX(-49%);
+  }
+}
+
 /* Модальное окно */
 
 .modal-feedback {
-  display: none;
+  opacity: 0;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
-  z-index: 5;
+  z-index: -10;
   width: 764px;
   min-height: 523px;
   padding-top: 67px;
@@ -1230,6 +1312,26 @@ a {
   padding-right: 98px; 
   background-color: #ffffff;
   box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
+}
+
+.modal-opened {
+  animation: open 0.3s linear;
+  animation-fill-mode: forwards;
+  z-index: 10;
+  opacity: 1;
+}
+
+.modal-closed {
+  animation: close 0.3s linear;
+  animation-fill-mode: forwards;
+  z-index: 10;
+}
+
+.modal-error {
+  animation: shake 0.3s;
+  animation-fill-mode: forwards;
+  z-index: 10;
+  opacity: 1;
 }
 
 .modal-feedback-message {
@@ -1309,7 +1411,6 @@ a {
   padding-right: 86px;
   padding-top: 17px;
   padding-bottom: 15px;
-
   background-color: #fb565a;
 }
 
