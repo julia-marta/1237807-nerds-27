@@ -1063,10 +1063,11 @@ a {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 1440px;
+  transform: translateX(-50%);
+  width: 1200px;
   z-index: 1;
   margin: 0;
-  margin-left: -720px;
+ 
 }
 
 .contacts iframe {
