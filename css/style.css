@@ -47,6 +47,7 @@ a {
 
 .button:active {
   color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
@@ -84,13 +85,20 @@ a {
 }
 
 .site-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .site-menu,
 .user-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
   margin-top: 25px;
@@ -208,7 +216,6 @@ a {
   padding-top: 17px;
   padding-bottom: 15px;
   background-color: #fb565a;
-  
 }
 
 .slider-button:hover,
@@ -244,9 +251,9 @@ a {
 #slider-toggle-3:checked ~ .slider-controls label[for="slider-toggle-3"]::after {
   content: "";
   position: absolute;
-
   top: 5px;
   left: 5px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 8px;
   height: 8px;
@@ -263,7 +270,10 @@ a {
 }
 
 .services-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -274,8 +284,6 @@ a {
   width: 300px;
   margin-right: 100px;
   margin-bottom: 80px;
-
-  
 }
 
 .services-item:nth-child(3n) {
@@ -374,6 +382,8 @@ a {
 /* Преимущества */
 
 .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-bottom: 44px;
   border-bottom: 2px solid #eeeeee;
@@ -473,9 +483,16 @@ a {
 }
 
 .partners-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -542,7 +559,11 @@ a {
 /* Колонки */
 
 .page-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
 }
 
@@ -555,6 +576,9 @@ a {
 
 .filter-form label {
   position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
 } 
@@ -570,7 +594,6 @@ a {
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
-  
   color: #000000;
 }
 
@@ -609,13 +632,12 @@ a {
   position: absolute;
   top: 30px;
   left: 0;
-
   width: 4px;
   height: 4px;
   padding: 0;
-
   border: 8px solid #ffffff;
   background-color: #ababab;
+  -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
   box-shadow: 0 2px 1px 0 #cfcfcf;
   border-radius: 50%;
   cursor: pointer;
@@ -630,7 +652,11 @@ a {
 }
 
 .filter-price-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -650,7 +676,9 @@ a {
   font: inherit;
   line-height: 22px;
   text-align: center;
+  -webkit-appearance: textfield;
   -moz-appearance: textfield;
+  appearance: textfield;
   background-color: #eeeeee;
   border: none;
   border-radius: 2px;
@@ -685,6 +713,7 @@ a {
   position: absolute;
   top: -1px;
   left: -35px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 25px;
   height: 25px;
@@ -806,23 +835,30 @@ a {
 /*  Сортировка */
 
 .sorting {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 54px;
 }
 
 .sorting-title {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   margin: 0;
   padding: 0;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  
   color: #000000;
 }
 
 .sorting-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   margin: 0;
   padding: 0;
@@ -848,6 +884,8 @@ a {
 }
 
 .sorting-toggles {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
@@ -874,8 +912,12 @@ a {
 /* Каталог */
 
 .catalog-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  max-width: 760px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -938,7 +980,6 @@ a {
   margin-left: 20px;
 }
 
-
 .catalog-item-title {
   margin: 0;
   margin-bottom: 14px;
@@ -982,6 +1023,7 @@ a {
 
 .catalog-item:hover,
 .catalog-item:focus {
+  -webkit-box-shadow: 0px 6px 15px 0px rgba(0, 1, 1, 0.25);
   box-shadow: 0px 6px 15px 0px rgba(0, 1, 1, 0.25);
 }
 
@@ -998,7 +1040,10 @@ a {
 /* Пагинатор */
 
 .pagination-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
   margin-top: 27px;
@@ -1012,6 +1057,7 @@ a {
   width: 50px;
   height: 50px;
   margin-right: 11px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   line-height: 52px;
   font-weight: 500;
@@ -1045,6 +1091,7 @@ a {
 
 .pagination-item:active:not(.pagination-current) {
   background-color: #d5d5d5;
+  -webkit-box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 
@@ -1062,12 +1109,11 @@ a {
   display: block;
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   width: 1200px;
   z-index: 1;
-  margin: 0;
- 
+  margin: 0 auto;
 }
 
 .contacts iframe {
@@ -1141,19 +1187,22 @@ a {
 /* Футер */
 
 .site-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 69px;
   padding-bottom: 69px;
-
 }
 
 .footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
   margin-right: 126px;
   padding: 0;
-
   list-style: none;
 }
 
@@ -1176,7 +1225,6 @@ a {
   left: 27px;
   width: 26px;
   height: 26px;
-
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -1229,18 +1277,22 @@ a {
 
 @keyframes open {
   0% {
+    -webkit-transform: translateY(-100%) translateX(-50%);
     transform: translateY(-100%) translateX(-50%);
   }
 
   60% {
+    -webkit-transform: translateY(-40%) translateX(-50%);
     transform: translateY(-40%) translateX(-50%);
   }
 
   70% {
+    -webkit-transform: translateY(-45%) translateX(-50%);
     transform: translateY(-45%) translateX(-50%);
   }
 
   100% {
+    -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
   }
 }
@@ -1248,21 +1300,25 @@ a {
 @keyframes close {
   0% {
     opacity: 1;
+    -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
   }
 
   30% {
     opacity: 1;
+    -webkit-transform: translateY(-60%) translateX(-50%);
     transform: translateY(-60%) translateX(-50%);
   }
 
   40% {
     opacity: 1;
+    -webkit-transform: translateY(-55%) translateX(-50%);
     transform: translateY(-55%) translateX(-50%);
   }
 
   100% {
     opacity: 1;
+    -webkit-transform: translateY(100%) translateX(-50%);
     transform: translateY(100%) translateX(-50%);
   }
 }
@@ -1270,6 +1326,7 @@ a {
 @keyframes shake {
   0%,
   100% {
+    -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
   }
   5%,
@@ -1282,6 +1339,7 @@ a {
   75%,
   85%,
   95% {
+    -webkit-transform: translateY(-50%) translateX(-51%);
     transform: translateY(-50%) translateX(-51%);
   }
   10%,
@@ -1293,6 +1351,7 @@ a {
   70%,
   80%,
   90% {
+    -webkit-transform: translateY(-50%) translateX(-49%);
     transform: translateY(-50%) translateX(-49%);
   }
 }
@@ -1304,6 +1363,8 @@ a {
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
   z-index: -10;
   width: 764px;
@@ -1312,24 +1373,31 @@ a {
   padding-left: 98px;
   padding-right: 98px; 
   background-color: #ffffff;
+  -webkit-box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
   box-shadow: 0px 20px 40px 0 rgba(0, 1, 1, 0.75);
 }
 
 .modal-opened {
+  -webkit-animation: open 0.3s linear;
   animation: open 0.3s linear;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   z-index: 10;
   opacity: 1;
 }
 
 .modal-closed {
+  -webkit-animation: close 0.3s linear;
   animation: close 0.3s linear;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   z-index: 10;
 }
 
 .modal-error {
+  -webkit-animation: shake 0.3s;
   animation: shake 0.3s;
+  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   z-index: 10;
   opacity: 1;
@@ -1342,13 +1410,17 @@ a {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
-
   color: #000000;
 }
 
 .feedback-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding-left: 2px;
   padding-right: 2px;
@@ -1364,6 +1436,7 @@ a {
 
 .feedback-form input,
 .feedback-form textarea {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 12px;
   font: inherit;
@@ -1382,6 +1455,27 @@ a {
   width: 760px;
   min-height: 118px;
   resize: none;
+}
+
+
+.feedback-form input::-webkit-input-placeholder, 
+.feedback-form textarea::-webkit-input-placeholder {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.feedback-form input::-moz-placeholder, 
+.feedback-form textarea::-moz-placeholder {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.feedback-form input:-ms-input-placeholder, 
+.feedback-form textarea:-ms-input-placeholder {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.feedback-form input::-ms-input-placeholder, 
+.feedback-form textarea::-ms-input-placeholder {
+  color: rgba(68, 68, 68, 0.5);
 }
 
 .feedback-form input::placeholder,
@@ -1447,10 +1541,14 @@ a {
 }
 
 .modal-close::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 .modal-close::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 
@@ -1465,8 +1563,3 @@ a {
 .modal-close:active::after {
   background-color: #ffeeee;
 }
-
-
-
-
-
