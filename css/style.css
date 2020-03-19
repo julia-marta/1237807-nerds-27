@@ -73,6 +73,7 @@ a {
 .site-logo {
   width: 160px;
   height: 65px;
+  margin-right: 20px;
 }
 
 .site-logo-link:hover,
@@ -98,12 +99,19 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
   margin-top: 25px;
   padding: 0;
   list-style: none;
+}
+
+.site-menu {
+  width: 700px;
 }
 
 .site-menu-item,
@@ -126,6 +134,7 @@ a {
 .user-menu-item {
   position: relative;
   padding-left: 40px;
+  margin-left: 20px;
 }
 
 .user-menu-item::before {
@@ -195,6 +204,7 @@ a {
 }
 
 .slide-title {
+  width: 520px;
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
@@ -205,12 +215,14 @@ a {
 }
 
 .slide-description {
+  width: 410px;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
 }
 
 .slider-button {
+  margin-bottom: 20px;
   padding-left: 53px;
   padding-right: 55px;
   padding-top: 17px;
@@ -385,7 +397,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 44px;
+  padding-bottom: 50px;
   border-bottom: 2px solid #eeeeee;
 }
 
@@ -447,18 +459,36 @@ a {
   margin-bottom: 15px;
 }
 
-.features-statistic-table {
-  margin-top: 26px;
-  border-collapse: separate;
-  border-spacing: 0px 32px;
-  border: none;
+.features-statistic-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-top: 31px;
+  padding: 0;
+  list-style: none;
   text-align: left;
 }
 
-.features-statistic-percents td {
-  padding-right: 12px;
+.features-statistic-item {
+  width: 110px;
+  margin-top: 10px;
+  margin-right: 9px;
+  line-height: 18px;
+}
+
+.features-statistic-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.features-statistic-percents {
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
   font-size: 45px;
-  line-height: 10px;
+  line-height: 45px;
   font-weight: 700;
   color: #000000;
 }
@@ -467,10 +497,6 @@ a {
   position: relative;
   top: -15px;
   font-size: 26px;
-}
-
-.features-statistic-description td {
-  line-height: 18px;
 }
 
 /* Партнёры */
@@ -860,7 +886,10 @@ a {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
+  margin-left: 20px;
   padding: 0;
   list-style: none;
 }
@@ -895,7 +924,6 @@ a {
 .sorting-toggle {
   margin-left: 20px;
   opacity: 0.2;
-  cursor: pointer;
 }
 
 .sorting-toggle-active,
